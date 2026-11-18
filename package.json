@@ -1,0 +1,30 @@
+{
+  "name": "human-browser-mcp",
+  "version": "0.2.0",
+  "description": "Local Chrome MCP server with compact page views, batched actions and on-demand visual interaction",
+  "license": "MIT",
+  "repository": "github:ChilsonX/human-browser-mcp",
+  "bin": { "human-browser-mcp": "src/server.js" },
+  "files": ["src", "scripts/config.js", "LICENSE", "README.md"],
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/browser.test.js",
+    "bench": "node test/benchmark.js",
+    "demo": "node test/fixture.js",
+    "config": "node scripts/config.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "playwright-core": "^1.65.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "^0.0.85",
+    "gpt-tokenizer": "^4.1.2"
+  }
+}
